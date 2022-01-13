@@ -1,0 +1,20 @@
+name: Close Issue 
+on:
+  issues:
+    types: [labeled]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Close Issue
+      uses: peter-evans/close-issue@v1
+      if: contains(github.event.issue.labels.*.name, 'feature')
+      with:
+        comment: |
+          Thank you  for this request. This request has been classified as a feature by the maintainers.
+          
+          We take all the requests for features seriously and have passed this on to the internal teams for their consideration.
+         
+          Please Considere Forking to add this feature :)
+         
