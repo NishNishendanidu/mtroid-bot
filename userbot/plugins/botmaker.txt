@@ -1,0 +1,47 @@
+#Official plugin for Black-Lightning 
+#Made with help of @xditya
+#Copyright (C) 2021 Raiden-devs@Github.com
+from var import Var
+from userbot.utils import lightning_cmd, bot
+from userbot import ALIVE_NAME
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "вℓα¢к ℓιgнтηιηg"
+picture = "resources.botpic.jpg"
+@bot.on(lightning_cmd(pattern="devbut")) 
+
+async def _(event):
+  name=Var.TG_BOT_USER_NAME_BF_HER
+  async with bot.conversation("@BotFather") as conv:
+   await event.edit("Assistant Bot Devloping Master Keep Patience😉")
+   await conv.send_message("/setinline")
+   await conv.get_response()
+   await conv.send_message(name)
+   await conv.get_response()
+   await conv.send_message("Heya Master Type here Something")
+   await conv.get_response()
+   await conv.send_message("/setname")
+   await conv.get_response() 
+   await conv.send_message(name)
+   await conv.get_response()
+   await conv.send_message("{DEFAULTUSER}'S αѕѕιѕтαηт")
+   await conv.get_response()
+   await conv.send_messssage("/setdescription")
+
+   await conv.get_response()
+   await conv.send_message(name)
+   await conv.get_reponse()
+   await conv.send_message("Heyy there🤙\nThis Black Lightning Userbot🇮🇳\nI am here to provide Assistant service to {DEFAULTUSER}😎\nYou can Message me to contact my Master😉")
+   await conv.get_reponse()
+   await conv.send_message("/setabouttext")
+   await conv.get_reponse()
+   await conv.send_message(name)
+   await conv.get_reponse()
+   await conv.send_message("I am {DEFAULTUSER}'s Assistant You can Use me to contact him")
+   await conv.get_reponse()
+   await conv.send_message("/setbotpic")
+   await conv.get_reponse()
+   await conv.send_message(name)
+   await conv.get_reponse()
+   await conv.send_file(picture)
+   respond = await conv.get_response()
+   await bot.send_message(event.chat_id. respond)
+   await event.edit("Bot is Perfectly ready Master you can check here {name}") 
